@@ -2,6 +2,7 @@ import './App.css';
 import imagenLogo from './imagenes/imgLogo.png';
 import Boton from './componentes/Boton';
 import Pantalla from './componentes/Pantalla';
+import BotonClear from './componentes/BotonClear';
 
 
 function App() {
@@ -40,6 +41,9 @@ function App() {
           <Boton>0</Boton>
           <Boton>.</Boton>
           <Boton>/</Boton>
+        </div>
+        <div className='fila'>
+          <BotonClear>Clear</BotonClear>
         </div>
       </div>
     </div>
