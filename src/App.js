@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [input, setInput] = useState('hola');
+  const [input, setInput] = useState('');
 
   const agregarInput = valores => {
     setInput(input + valores);
@@ -51,7 +51,9 @@ function App() {
           <Boton manejarClic = {agregarInput}>/</Boton>
         </div>
         <div className='fila'>
-          <BotonClear>Clear</BotonClear>
+          <BotonClear manejarClear={() => setInput('')}>
+            Clear
+          </BotonClear>
         </div>
       </div>
     </div>
