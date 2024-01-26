@@ -10,13 +10,15 @@ import { evaluate } from 'mathjs';
 function App() {
 
   const [input, setInput] = useState('');
+  const operadoresBasicosRegex = /[+\-*/]/;
 
   const agregarInput = valores => {
     setInput(input + valores);
   };
 
   const calcularResultado = () => {
-    if (input){
+    if (input && operadoresBasicosRegex.test(input)){
+      console.log("input", typeof input);
       setInput(evaluate(input));
     }else{
       alert("por favor ingreese valores para realizar los calculos ")

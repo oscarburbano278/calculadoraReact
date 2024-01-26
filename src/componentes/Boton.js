@@ -4,7 +4,7 @@ import '../estilos/Boton.css'
 function Boton (props){
 
     const esOperadpr = valor => {
-        return isNaN(valor) && (valor != '.') && ( valor != '=');
+        return isNaN(valor) && (valor !== '.') && ( valor !=='=');
     };
 
     return(
